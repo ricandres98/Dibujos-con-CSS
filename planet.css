@@ -1,0 +1,535 @@
+:root{
+    --background: linear-gradient(228deg, rgba(35,10,67,1) 0%, rgba(85,16,98,1) 100%);
+    --background-2: #380f52;
+    --water: #283995;
+    --water-2: #0780b7;
+    --green-1: #a4ce3a;
+    --green-2: #2bb34f;
+    --glow: #04C4C2;
+    --shadow: #282E75;
+    --cloud: #E4E6F0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    block-size: 100vh;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brillo {
+    block-size: 420px;
+    inline-size: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 60px 20px var(--glow), 0px 0px 0px 50px var(--shadow); 
+}
+.planeta {
+    block-size: 270px;
+    inline-size: 270px;
+    position: relative;
+    border-radius: 50%;
+    background-color: var(--water);
+    overflow: hidden;
+}
+.continent {
+    position: absolute;
+}
+.continent1 {
+    inline-size: 40px;
+    block-size: 20px;
+    top: 20%;
+    left: 25%;
+    border-radius: 10px;
+    background-color: var(--green-1);
+}
+/*-------------------
+-----continente 2 ---
+-------------------*/
+.continent2 {
+    inline-size: 200px;
+    block-size: 90px;
+    left: 40%;
+    top: 9%;
+}
+.continent2 .land1 {
+    block-size: 45px;
+    inline-size: 150px;
+    position: absolute;
+    left: 10%;
+    border-radius: 25px;
+    background-color: var(--green-1);
+}
+.continent2 .land1::before {
+    content: '';
+    inline-size: 60px;
+    block-size: 20px;
+    position: absolute;
+    top: 15%;
+    left: 23%;
+    border-radius: 10px;
+    background-color: var(--green-2);
+}
+.continent2 .land2 {
+    block-size: 45px;
+    inline-size: 40px;
+    position: absolute;
+    left: 30%;
+    top: 45px;
+    z-index: 1;
+    background-color: var(--green-1);
+}
+.continent2 .land2::before {
+    content: '';
+    position: absolute;
+    block-size: 10px;
+    inline-size: 40px;
+    left: -30px;
+    border-radius: 10px;
+    background-color: var(--water);
+}
+.continent2 .land2::after {
+    content: '';
+    position: absolute;
+    block-size: 10px;
+    inline-size: 40px;
+    right: -32px;
+    border-radius: 10px;
+    background-color: var(--water);
+}
+.continent2 .land3 {
+    block-size: 35px;
+    inline-size: 120px;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    background-color: var(--green-1);
+}
+.continent2 .land3::before {
+    content: '';
+    inline-size: 60px;
+    block-size: 15px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    border-radius: 10px;
+    background-color: var(--green-2);
+    z-index: 1;
+}
+/*-------------------
+------continente 3 --
+-------------------*/
+.continent3 {
+    inline-size: 180px;
+    block-size: 90px;
+    top: 50%;
+    left: -10px;
+}
+.continent3 .land1 {
+    block-size: 40px;
+    inline-size: 140px;
+    position: absolute;
+    border-radius: 25px;
+    background-color: var(--green-1);
+}
+.continent3 .land1::before {
+    content: '';
+    block-size: 15px;
+    inline-size: 50px;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    border-radius: 10px;
+    background-color: var(--green-2);
+}
+.continent3 .land1::after {
+    content: '';
+    block-size: 15px;
+    inline-size: 18px;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    border-radius: 10px;
+    background-color: var(--green-2);
+}
+.continent3 .land2 {
+    block-size: 45px;
+    inline-size: 40px;
+    position: absolute;
+    left: 48%;
+    top: 40px;
+    z-index: 1;
+    background-color: var(--green-1);
+}
+.continent3 .land2::before {
+    content: '';
+    position: absolute;
+    block-size: 15px;
+    inline-size: 40px;
+    left: -20px;
+    border-radius: 10px;
+    background-color: var(--water);
+}
+.continent3 .land2::after {
+    content: '';
+    position: absolute;
+    block-size: 15px;
+    inline-size: 40px;
+    right: -32px;
+    border-radius: 10px;
+    background-color: var(--water);
+}
+.continent3 .land3 {
+    block-size: 35px;
+    inline-size: 110px;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--green-1);
+}
+.continent3 .land3::before {
+    content: '';
+    block-size: 15px;
+    inline-size: 40px;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    border-radius: 10px;
+    background-color: var(--green-2);
+    z-index: 1;
+}
+/*-------------------
+------continente 4 --
+-------------------*/
+.continent4 {
+    inline-size: 200px;
+    block-size: 70px;
+    left: 60%;
+    top: 47%;
+}
+.continent4 .land1 {
+    block-size: 30px;
+    inline-size: 150px;
+    position: absolute;
+    border-radius: 25px;
+    background-color: var(--green-1);
+}
+.continent4 .land1::before {
+    content: '';
+    block-size: 15px;
+    inline-size: 50px;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    transform: translate(0, -50%);
+    border-radius: 10px;
+    background-color: var(--green-2);
+}
+.continent4 .land2 {
+    block-size: 20px;
+    inline-size: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-radius: 25px;
+    background-color: var(--green-1);
+}
+
+/*-------------------
+-----continente 5----
+--------------------*/
+
+.continent5 {
+    inline-size: 200px;
+    block-size: 50px;
+    left: 40%;
+    bottom: 4%;
+}
+.continent5 .land1 {
+    block-size: 25px;
+    inline-size: 110px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-radius: 25px;
+    background-color: var(--green-1);
+}
+.continent5 .land1::before {
+    content: '';
+    block-size: 13px;
+    inline-size: 40px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 10px;
+    background-color: var(--green-2);
+}
+
+/*--------------------
+---- Nubes overflow---
+--------------------*/
+.cielo {
+    block-size: 270px;
+    inline-size: 270px;
+    position: absolute;
+    border-radius: 50%;
+}
+/*variable comun*/
+.nube {
+    background-color: var(--cloud);
+    position: absolute;
+    opacity: 0.6;
+}
+/*--------------------
+----- NUBES-1 --------
+--------------------*/
+.bloque-de-nubes1 {
+    position: absolute;
+    inline-size: 150px;
+    block-size: 30px;
+    left: 35%;
+}
+.bloque-de-nubes1 .nube1{
+    inline-size: 30px;
+    block-size: 20px;
+    bottom: 0;
+    border-radius: 10px;
+}
+.bloque-de-nubes1 .nube2 {
+    inline-size: 70px;
+    block-size: 20px;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+}
+
+/*--------------------
+----- NUBES-2 --------
+--------------------*/
+.bloque-de-nubes2 {
+    position: absolute;
+    inline-size: 150px;
+    block-size: 60px;
+    left: -25px;
+    top: 35%;
+}
+.bloque-de-nubes2 .nube1{
+    inline-size: 90px;
+    block-size: 25px;
+    border-radius: 20px;
+}
+.bloque-de-nubes2 .nube2{
+    inline-size: 20px;
+    block-size: 10px;
+    top: 25px;
+    left: 30%;
+}
+.bloque-de-nubes2 .nube2::before {
+    content: '';
+    position: absolute;
+    inline-size: 15px;
+    block-size: 10px;
+    left: -7px;
+    background-color: var(--water);
+    border-radius: 20px;
+}
+.bloque-de-nubes2 .nube2::after {
+    content: '';
+    position: absolute;
+    inline-size: 15px;
+    block-size: 10px;
+    right: -10px;
+    background-color: var(--water-2);
+    border-radius: 10px;
+}
+.bloque-de-nubes2 .nube3{
+    inline-size: 140px;
+    block-size: 25px;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+}
+/*--------------------
+----- NUBES-3 --------
+--------------------*/
+.bloque-de-nubes3 {
+    position: absolute;
+    inline-size: 90px;
+    block-size: 60px;
+    right: -17%;
+    top: 40%;
+}
+.bloque-de-nubes3 .nube1{
+    inline-size: 50px;
+    block-size: 25px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.bloque-de-nubes3 .nube2{
+    inline-size: 20px;
+    block-size: 10px;
+    left: 50%;
+    top: 25px;
+    transform: translate(-50%,0);
+}
+.bloque-de-nubes3 .nube2::before {
+    content: '';
+    position: absolute;
+    inline-size: 14px;
+    block-size: 10px;
+    left: -6px;
+    background-color: var(--green-1);
+    border-radius: 20px;
+}
+.bloque-de-nubes3 .nube2::after {
+    content: '';
+    position: absolute;
+    inline-size: 15px;
+    block-size: 10px;
+    right: -7px;
+    background-color: var(--background-2);
+    border-radius: 10px;
+}
+.bloque-de-nubes3 .nube3{
+    inline-size: 100%;
+    block-size: 25px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+}
+/*--------------------
+----- NUBES-4 --------
+--------------------*/
+.bloque-de-nubes4 {
+    position: absolute;
+    inline-size: 200px;
+    block-size: 60px;
+    left: 10%;
+    top: 70%;
+}
+.bloque-de-nubes4 .nube1{
+    inline-size: 40px;
+    block-size: 15px;
+    border-radius: 20px;
+    left: 0;
+    bottom: 0;
+}
+.bloque-de-nubes4 .nube2{
+    inline-size: 70px;
+    block-size: 30px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 10%;
+}
+
+/*------------------------
+----- Water spots --------
+------------------------*/
+.water1{
+    inline-size: 85px;
+    block-size: 50px;
+
+    top: 30%;
+    left: 15px;
+}
+.water1 .spot1{
+    inline-size: 40px;
+    block-size: 20px;
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
+    background-color: var(--water-2);
+}
+.water1 .spot2{
+    inline-size: 15px;
+    block-size: 10px;
+    position: absolute;
+    right: 12px;
+    top: 20px;
+    background-color: var(--water-2);
+}
+.water1 .spot2::before {
+    content: '';
+    inline-size: 10px;
+    block-size: 10px;
+    position: absolute;
+    left: -4px;
+    background-color: var(--water);
+    border-radius: 5px;
+    /* border: yellow 1px solid; */
+}
+.water1 .spot2::after {
+    content: '';
+    inline-size: 10px;
+    block-size: 10px;
+    position: absolute;
+    right: -6px;
+    background-color: var(--water);
+    border-radius: 5px;
+    /* border: yellow 1px solid; */
+}
+.water1 .spot3{
+    inline-size: 70px;
+    block-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: var(--water-2);
+}
+
+/*------------------------
+----- Water spot 2 --------
+------------------------*/
+.water2{
+    inline-size: 60px;
+    block-size: 40px;
+    top: 28%;
+    right: 20px;
+}
+.water2 .spot1{
+    inline-size: 20px;
+    block-size: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    background-color: var(--water-2);
+}
+
+/*------------------------
+----- Water spot 3 --------
+------------------------*/
+.water3{
+    inline-size: 200px;
+    block-size: 50px;
+    bottom: 5%;
+    left: 25%;
+}
+.water3 .spot1{
+    inline-size: 40px;
+    block-size: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    border-radius: 10px;
+    background-color: var(--water-2);
+}
+.water3 .spot2{
+    inline-size: 40px;
+    block-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 55%;
+    border-radius: 10px;
+    background-color: var(--water-2);
+}
