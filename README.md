@@ -1,2 +1,2 @@
 # Dibujos-con-CSS
-En este repositorio se encuentran algunos dibujos con CSS que he hecho
+En este repositorio se encuentran algunos dibujos que he hecho utilizando CSS 
